@@ -3,6 +3,7 @@
 :host {
     input {
         all: revert;
+        accent-color: a.$var-accent;
     }
 
     label{

@@ -2,6 +2,8 @@
 
 :host {
     min-width: 60rem;
+    gap: .8rem;
+    @include a.mix-flex($dir: column);
 
     table, th, td {
         width: 100%;
