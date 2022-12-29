@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InventoryService } from 'src/app/service/inventory.service';
+import { TogglerService } from 'src/app/services/toggler.service';
 
 @Component({
   selector: 'app-table',
@@ -8,13 +9,15 @@ import { InventoryService } from 'src/app/service/inventory.service';
 })
 export class TableComponent implements OnInit {
   public inventory$;
-  public amount = [1, 2, 3]
+  public shouldShow$: boolean = true;
 
-  constructor(private inventoryService: InventoryService) { }
+  constructor(
+    private inventoryService: InventoryService,
+    private togglerService: TogglerService
+  ) { }
 
   ngOnInit(): void {
-    this.inventoryService.getInventory().subscribe(inventory$ => { this.inventory$ = inventory$ 
-    console.log(this.inventory$);
-    })
+    this.inventoryService.getInventory().subscribe(inventory$ => this.inventory$ = inventory$)
+    this.togglerService.getVisibility().subscribe(shown$ => this.shouldShow$ = shown$);
   }
 }

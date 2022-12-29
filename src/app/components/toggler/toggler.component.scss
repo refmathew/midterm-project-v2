@@ -1,0 +1,11 @@
+@use 'abstracts' as a;
+
+:host {
+    input {
+        all: revert;
+    }
+
+    label{
+        cursor: default;
+    }
+}

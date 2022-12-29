@@ -7,6 +7,7 @@ import { FormButtonComponent } from './components/form/form-button/form-button.c
 import { FormInputComponent } from './components/form/form-input/form-input.component';
 import { FormsModule } from '@angular/forms';
 import { TableComponent } from './components/table/table.component';
+import { TogglerComponent } from './components/toggler/toggler.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TableComponent } from './components/table/table.component';
     FormWrapperComponent,
     FormButtonComponent,
     FormInputComponent,
-    TableComponent
+    TableComponent,
+    TogglerComponent
   ],
   imports: [
     BrowserModule,
