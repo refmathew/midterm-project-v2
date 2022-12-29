@@ -1,0 +1,15 @@
+@use 'abstracts' as abs;
+
+.form {
+    gap: 1.6rem;
+    @include abs.mix-flex($dir: column, $aln: center);
+
+    &__input-wrapper {
+        flex-wrap: wrap;
+        gap: 1.6rem;
+        @include abs.mix-flex($aln: flex-start);
+    }
+    &__input {
+        margin: auto;
+    }
+}

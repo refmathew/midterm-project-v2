@@ -1,0 +1,28 @@
+@use 'abstracts' as a;
+
+:host {
+    min-width: 60rem;
+    overflow-x: scroll;
+
+    table, th, td {
+        width: 100%;
+        border: .1rem solid rgba( a.$var-secondary, .2 );
+        border-collapse: collapse;
+    }
+
+    tr {
+        display: flex;
+        &:nth-child(odd){
+            background-color: rgba(a.$var-secondary, .1);
+        }
+    }
+
+    td, th {
+        padding: 1.2rem 3.2rem;
+        // @include a.mix-flex($aln: center, $jst: center);
+    }
+
+    th {
+        font-weight: 700;
+    }
+}

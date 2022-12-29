@@ -1,0 +1,7 @@
+@use 'abstracts' as abs;
+
+:host {
+    padding: abs.fnc-clampify(64, 128);
+    gap: abs.fnc-clampify(32, 64);
+    @include abs.mix-flex($dir: column, $aln: center);
+}

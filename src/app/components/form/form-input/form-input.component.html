@@ -1,0 +1,2 @@
+<input class="input" [type]="type" [name]="name" [(ngModel)]="value" (input)="onInput()" [placeholder]="name[0].toUpperCase() + name.slice(1)" />
+<span *ngIf="_invalidInput.includes(name)">Invalid input</span>

@@ -1,0 +1,16 @@
+<form class="form">
+    <div class="form__input-wrapper">
+        <app-form-input class="form__input" name="name" type="text" (input)="onInput($event)"
+            [shouldClearField]="shouldClearField.asObservable()" [_invalidInput$]="_invalidInput$.asObservable()">
+        </app-form-input>
+        <app-form-input class="form__input" name="category" type="text" (input)="onInput($event)"
+            [shouldClearField]="shouldClearField.asObservable()" [_invalidInput$]="_invalidInput$.asObservable()">
+        </app-form-input>
+        <app-form-input class="form__input" name="price" type="number" (input)="onInput($event)"
+            [shouldClearField]="shouldClearField.asObservable()" [_invalidInput$]="_invalidInput$.asObservable()">
+        </app-form-input>
+    </div>
+
+    <app-form-button class="form__button" (buttonClick)="onButtonClick()"></app-form-button>
+</form>
+

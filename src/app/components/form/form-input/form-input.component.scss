@@ -1,0 +1,30 @@
+@use 'abstracts' as abs;
+
+:host {
+    gap: .8rem;
+    @include abs.mix-flex($dir: column, $aln: center);
+    @include abs.mix-font('Open sans', 13, 16);
+
+    input {
+        height: abs.fnc-clampify(49, 63);
+        padding: .6rem 1.6rem;
+        border: abs.fnc-clampify(3, 4) solid abs.$var-secondary;
+        gap: 1.6rem;
+        color: abs.$var-secondary;
+        @include abs.mix-flex($aln: center);
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+
+    span {
+        color: #e71d36;
+    }
+}

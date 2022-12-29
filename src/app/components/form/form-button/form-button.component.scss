@@ -1,0 +1,13 @@
+@use 'abstracts' as abs;
+
+:host {
+    align-self: flex-end;
+
+    button {
+        padding: .8rem 1.6rem;
+        border-radius: 1.6rem;
+        background-color: abs.$var-accent;
+        cursor: pointer;
+        @include abs.mix-font('Open sans', 13, 16);
+    }
+}
